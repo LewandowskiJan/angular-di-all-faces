@@ -1,6 +1,7 @@
-export const environment = {
+import { Environment } from './model/environment.model';
+import { Environments } from './model/environments.enum';
+
+export const environment: Environment = {
   production: true,
-  ocean: false,
-  mountain: false,
-  land: false,
+  env: Environments.PROD,
 };

@@ -9,10 +9,11 @@ import { ENVIRONMENT } from './token/environment.token';
 })
 export class AppComponent implements OnInit {
   title = 'angular-di-all-faces';
+  currentEnvironment = '';
 
   constructor(@Inject(ENVIRONMENT) public environment: any) {}
 
   ngOnInit(): void {
-    console.log(this.environment);
+    this.currentEnvironment = this.environment.env;
   }
 }
